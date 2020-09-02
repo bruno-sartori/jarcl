@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './index.module.scss'
+import './index.scss'
 
 export interface ButtonProps {
   title: string

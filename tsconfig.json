@@ -29,7 +29,7 @@
     "noEmit": true
   },
   "include": [
-    "src"
+    "src", "test/components/Button/index.test.tsx"
   ],
   "exclude": [
     "node_modules",
