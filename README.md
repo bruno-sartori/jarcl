@@ -15,12 +15,11 @@ npm install --save jarcl
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'jarcl'
-import 'jarcl/dist/index.css'
+import { Button } from 'jarcl'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Button title="teste" />
   }
 }
 ```
