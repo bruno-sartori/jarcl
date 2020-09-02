@@ -12,12 +12,10 @@ declare module '*.scss' {
   export default content
 }
 
-interface SvgrComponent
-  extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+declare module 'jarcl' {
+  interface ButtonProps {
+    title: string
+  }
 
-declare module '*.svg' {
-  const svgUrl: string
-  const svgComponent: SvgrComponent
-  export default svgUrl
-  export { svgComponent as ReactComponent }
+  export class Button extends React.Component<ButtonProps, any> {}
 }
