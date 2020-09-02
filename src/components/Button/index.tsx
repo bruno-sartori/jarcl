@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import './index.module.scss'
 
-interface ButtonProps {
+export interface ButtonProps {
   title: string
 }
 
+/**
+ * Componente de botao
+ */
 class Button extends Component<ButtonProps> {
   render() {
     const { title } = this.props
