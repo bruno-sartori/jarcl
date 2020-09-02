@@ -1,10 +1,8 @@
 import React from 'react'
-
-import { ExampleComponent } from 'jarcl'
-import 'jarcl/dist/index.css'
+import { Button } from 'jarcl';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Button title="teste" />
 }
 
 export default App
