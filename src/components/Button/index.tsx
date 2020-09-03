@@ -1,21 +1,30 @@
 import React, { Component } from 'react'
 import './index.scss'
 
-declare interface ButtonProps {
+declare interface IButtonProps {
   title: string
   bgColor?: string
+  onClick?: () => void
+  type?: string
 }
 
 /**
  * Componente de botao
  */
-class Button extends Component<ButtonProps> {
+class Button extends Component<IButtonProps> {
   render() {
-    const { title, bgColor = undefined } = this.props
+    const { title, onClick, type = 'default' } = this.props
 
-    const customStyle = bgColor ? { backgroundColor: bgColor } : {}
+    const customClass = `jarcl-button--${type}`
 
-    return <button className='jarcl-button' style={customStyle}>{title}</button>
+    return (
+      <button
+        className={`jarcl-button ${customClass}`}
+        onClick={onClick}
+      >
+        {title}
+      </button>
+    )
   }
 }
 

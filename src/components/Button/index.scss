@@ -1,8 +1,50 @@
+@import '../../index.scss';
+
 :root {
-  --jarcl-button-bg-color: coral;
+  --jarcl-button-bg-color: var(--color-white);
+  --jarcl-button-border-radius: 3px;
+  --jarcl-button-border: 1px solid var(--color-silver);
+  --jarcl-button-padding: 5px 10px;
+  --jarcl-button-hover-color: var(--color-white);
+  --jarcl-button-hover-bg-color: var(--color-malibu);
+  --jarcl-button-hover-border-color: var(--color-malibu);
+  --jarcl-button-transition: 0.1s;
+
+  --jarcl-button--primary-bg-color: var(--color-malibu);
+  --jarcl-button--primary-color: var(--color-white);
+  --jarcl-button--primary-border-color: var(--color-malibu);
+  --jarcl-button--primary-hover-color: var(--color-white);
+  --jarcl-button--primary-hover-bg-color: var(--color-dodger-blue);
+  --jarcl-button--primary-hover-border-color: var(--color-dodger-blue);
 }
 
 .jarcl-button {
-  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border-radius: var(--jarcl-button-border-radius);
   background-color: var(--jarcl-button-bg-color);
+  border: var(--jarcl-button-border);
+  padding: var(--jarcl-button-padding);
+  transition: var(--jarcl-button-transition);
+
+  &:active {
+    border-color: var(--jarcl-button-border-color);
+  }
+
+  &:hover {
+    transition: var(--jarcl-button-transition);
+
+  }
+
+  &--primary {
+    background-color: var(--jarcl-button--primary-bg-color);
+    color: var(--jarcl-button--primary-color);
+    border-color: var(--jarcl-button--primary-border-color);
+
+    &:hover {
+      color: var(--jarcl-button--primary-hover-color);
+      background-color: var(--jarcl-button--primary-hover-bg-color);
+      border-color: var(--jarcl-button--primary-hover-border-color);
+    }
+  }
 }

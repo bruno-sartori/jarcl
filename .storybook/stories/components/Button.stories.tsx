@@ -17,7 +17,15 @@ interface ButtonProps {
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
+export const Default = Template.bind({})
+Default.args = {
+  title: 'Click me',
+  onClick: () => alert('You have clicked me')
+}
+
 export const Primary = Template.bind({})
 Primary.args = {
-  title: 'lalalal'
+  title: 'Click me',
+  onClick: () => alert('You have clicked me'),
+  type: 'primary',
 }
