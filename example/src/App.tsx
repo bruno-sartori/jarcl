@@ -1,8 +1,17 @@
 import React from 'react'
-import { Button } from 'jarcl';
+import { Button, ThemeProviderHoc } from 'jarcl';
 
 const App = () => {
-  return <Button title="teste" />
+  return (
+    <>
+      <Button title="teste" />
+    </>
+  );
+}
+const themeProviderConfig = {
+  components: [
+    { name: '--jarcl-button-bg-color', value: '#000' }
+  ]
 }
 
-export default App
+export default ThemeProviderHoc(themeProviderConfig)(App);

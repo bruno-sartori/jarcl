@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './index.scss'
 
-export interface ButtonProps {
+declare interface ButtonProps {
   title: string
+  bgColor?: string
 }
 
 /**
@@ -10,9 +11,11 @@ export interface ButtonProps {
  */
 class Button extends Component<ButtonProps> {
   render() {
-    const { title } = this.props
+    const { title, bgColor = undefined } = this.props
 
-    return <button className='jarcl-button'>{title}</button>
+    const customStyle = bgColor ? { backgroundColor: bgColor } : {}
+
+    return <button className='jarcl-button' style={customStyle}>{title}</button>
   }
 }
 

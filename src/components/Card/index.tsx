@@ -10,9 +10,14 @@ export interface CardProps {
  */
 class Card extends Component<CardProps> {
   render() {
-    const { title } = this.props
+    const { title, children } = this.props
 
-    return <div className='jarcl-Card'>{title}</div>
+    return (
+      <div className='jarcl-card'>
+        <div className='jarcl-card--title'>{title}</div>
+        <div className='jarcl-card--content'>{children}</div>
+      </div>
+    )
   }
 }
 

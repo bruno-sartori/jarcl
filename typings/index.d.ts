@@ -15,7 +15,19 @@ declare module '*.scss' {
 declare module 'jarcl' {
   interface ButtonProps {
     title: string
+    bgColor?: string
   }
 
   export class Button extends React.Component<ButtonProps, any> {}
+
+  interface IThemeProviderComponentRules {
+    name: string;
+    value: any;
+  }
+
+  interface IThemeProviderConfig {
+    components: IThemeProviderComponentRules[];
+  }
+
+  export function ThemeProviderHoc(props: IThemeProviderConfig): any
 }

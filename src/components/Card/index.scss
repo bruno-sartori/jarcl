@@ -1,4 +1,13 @@
-.jarcl-button {
+.jarcl-card {
   border-radius: 3px;
   background-color: #fff;
+
+  &--title {
+    font-size: 18px;
+    color: #000;
+  }
+
+  &--content {
+    border-top: 1px solid #eaeaea;
+  }
 }

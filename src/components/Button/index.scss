@@ -1,4 +1,8 @@
+:root {
+  --jarcl-button-bg-color: coral;
+}
+
 .jarcl-button {
   border-radius: 3px;
-  background-color: #fff;
+  background-color: var(--jarcl-button-bg-color);
 }
