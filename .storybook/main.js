@@ -21,6 +21,11 @@ module.exports = {
       include: path.resolve(__dirname, '../'),
     });
 
+    // specific alias for sass
+    config.resolve.alias['images'] = path.resolve(__dirname, '../src/assets/images/');
+    config.resolve.alias['styles'] = path.resolve(__dirname, '../src/styles/');
+
+
     // Return the altered config
     return config;
   },
